@@ -160,7 +160,7 @@ map <expr> <F8> bufloaded("__Tag_List__")?"q":":TlistOpen\<cr>"
 "vmap <silent> ,tg :!ctags -R --fields=+lS<cr><cr>
 "nmap ,ts :!ctags -Rn --c++-kinds=+p --fields=+ialS --extra=+q -o ~/.vim/systags /usr/include /usr/local/include<cr><cr>
 set tags+=$HOME/.vim/systags
-nmap ,ts :!ctags -I __THROWNL -I -I __THROW -I __attribute_pure__ -I __nonnull -I __attribute__ -I __wur --file-scope=yes --langmap=c:+.h --languages=c --links=yes --c-kinds=+p --fields=+iaS --extra=+q  -f ~/.vim/systags /usr/include/* /usr/include/sys/* /usr/include/bits/*  /usr/include/netinet/* /usr/local/include<cr><cr>
+nmap ,ts :!ctags -I __THROWNL -I -I __THROW -I __attribute_pure__ -I __nonnull -I __attribute__ -I __wur --file-scope=yes --langmap=c:+.h --languages=c --links=yes --c-kinds=+p --fields=+iaS --extra=+q  -o ~/.vim/systags /usr/include/* /usr/include/sys/* /usr/include/bits/*  /usr/include/netinet/* /usr/local/include<cr><cr>
 
 if has("cscope")
     set csprg=/usr/bin/cscope " 指定用来执行cscope的命令
